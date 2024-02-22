@@ -14,7 +14,6 @@ import static org.junit.Assert.assertEquals;
 @RunWith(MockitoJUnitRunner.class)
 
 public class LionTest {
-    boolean hasMane;
 
     Feline feline = new Feline();
 
@@ -30,21 +29,13 @@ public class LionTest {
 
     @Test
     public void checkGetKittens(){
-        //Mockito.when(feline.getKittens()).thenReturn(1);
         assertEquals ("Количество не совпадает", feline.getKittens(), lion.getKittens());
-
     }
 
-    @Test
-    public void checkDoesHaveMane(){
-        //lion.doesHaveMane();
-        //Mockito.when(lion.doesHaveMane()).thenReturn(hasMane);
-        assertEquals ("Есть грива", true, lion.doesHaveMane());
-    }
 
     @Test
     public void checkGetFood() throws Exception {
-        //animal.getFood("Хищник");
+
         Mockito.when(animal.getFood("Хищник")).thenReturn(List.of("Животные", "Птицы", "Рыба"));
 
         try {

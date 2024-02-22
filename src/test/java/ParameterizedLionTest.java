@@ -31,11 +31,8 @@ public class ParameterizedLionTest {
 
     @Test
     public void shouldBeDefinition() throws Exception {
-
-        Lion lion = new Lion(sex, feline);
-
-        assertEquals (hasMane, lion.doesHaveMane());
-
+      Lion lion = new Lion(sex, feline);
+      assertEquals (hasMane, lion.doesHaveMane());
     }
 
 }
