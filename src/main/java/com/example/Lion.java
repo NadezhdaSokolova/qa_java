@@ -5,7 +5,7 @@ import java.util.List;
 public class Lion extends Animal{
 
     boolean hasMane;
-    private Predator feline;
+    private final Predator feline;
 
 
     public Lion(String sex, Predator feline) throws Exception {
@@ -29,6 +29,6 @@ public class Lion extends Animal{
     }
 
     public List<String> getFood() throws Exception {
-        return feline.eatMeat();
+        return feline.getFood("Хищник");
     }
 }

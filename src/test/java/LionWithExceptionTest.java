@@ -10,20 +10,11 @@ public class LionWithExceptionTest {
     Predator feline;
 
     @Test()
-    public void constructorThrowsExceptionOnIncorrectSex()  {
+    public void constructorThrowsExceptionOnIncorrectSex() {
         Exception exception = Assert.assertThrows(Exception.class, () -> {
-            Lion lion = new Lion(sex,feline);
+            Lion lion = new Lion(sex, feline);
         });
         assertEquals("Используйте допустимые значения пола животного - самец или самка", exception.getMessage());
     }
-
-    @Test()
-    public void ExceptionOnIncorrectSex()  {
-        Exception exception = Assert.assertThrows(Exception.class, () -> {
-            Lion lion = new Lion(sex,feline);
-            lion.doesHaveMane();
-        });
-        assertEquals("Используйте допустимые значения пола животного - самец или самка", exception.getMessage());
-    }
-
 }
+

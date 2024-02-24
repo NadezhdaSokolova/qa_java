@@ -24,4 +24,10 @@ public class Feline extends Animal implements Predator {
         return kittensCount;
     }
 
+    @Override
+    public List<String> getFood(String animalKind) {
+        return List.of("Животные", "Птицы", "Рыба");
+    }
+
 }
+

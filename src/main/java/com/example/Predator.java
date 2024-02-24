@@ -10,5 +10,5 @@ public interface Predator {
     int getKittens(int kittensCount);
 
 
-
+    List<String> getFood(String animalKind);
 }
